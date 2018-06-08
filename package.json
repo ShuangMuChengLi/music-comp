@@ -1,0 +1,20 @@
+{
+    "description": "A music component of html5 ",
+    "name": "date-util-hyh",
+    "version": "1.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ShuangMuChengLi/date-util-hyh.git"
+    },
+    "author": {
+        "name": "linchaoqun",
+        "email": "lchaoqun@sina.cn"
+    },
+    "homepage": "http://www.linchaoqun.com/",
+    "keywords": [
+        "date-util-hyh",
+        "date util"
+    ]
+}
