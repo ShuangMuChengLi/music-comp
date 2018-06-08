@@ -5,6 +5,8 @@ This is a music component of html5.
 
 demo: https://www.linchaoqun.com/
 
+
+
 #install
 ```bash
 npm install music-comp
