@@ -21,8 +21,8 @@ By window
 By commonJS
  
 ```bash
-requrie("music-comp/css/index.css");
-var musicComp = requrie("music-comp");
+require("music-comp/css/index.css");
+var musicComp = require("music-comp");
 ```
  
  
