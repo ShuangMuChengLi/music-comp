@@ -16,21 +16,54 @@ function musicComp(musicList) {
         var musicSource = document.getElementById("musicSource");
         var musicRuning = false;
         var index = 0;
+        var currentMusic = {
+            name: "",
+            singer: "",
+            src: ""
+        };
         function play() {
-            if(++index ===  musicList.length){
+            if(++index >=  musicList.length){
                 index = 0;
             }
-            musicSource.src = musicList[index];
-            music.load();
-            music.play();
+            if(musicList[index] ){
+                setSrc(index);
+                music.load();
+                music.play();
+            }else{
+                console.error("")
+            }
         }
-
+        function setSrc(index) {
+            if(musicList[index].src){
+                currentMusic.src = musicList[index].src;
+            }else{
+                currentMusic.src = musicList[index];
+            }
+            musicSource.src = currentMusic.src;
+            if(musicList[index].singer){
+                currentMusic.singer = musicList[index].singer;
+            }else{
+                currentMusic.singer = "";
+            }
+            if(musicList[index].name){
+                currentMusic.name = musicList[index].name;
+            }else{
+                var reg = /\/(\w+)\.\w+$/;
+                var src = musicList[index];
+                var fileName = src.match(reg)[1];
+                currentMusic.name = fileName;
+            }
+            if(currentMusic.singer){
+                musicIcon.title = currentMusic.name + " — " + currentMusic.singer;
+            }else{
+                musicIcon.title = currentMusic.name ;
+            }
+        }
         musicSource.onerror = function () {
             musicList.splice(index,1);
             play();
         };
-        // musicSource.setAttribute("src",musicList[0]);
-        musicSource.src = musicList[index];
+        setSrc(index);
         music.load();
 
         musicIcon.addEventListener("click",function (e) {

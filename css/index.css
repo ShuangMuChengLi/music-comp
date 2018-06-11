@@ -1,6 +1,6 @@
-/*.audio{*/
-    /*visibility: hidden;*/
-/*}*/
+.audio{
+    visibility: hidden;
+}
 @keyframes music
 {
     0%   {transform: rotate(0);}
