@@ -20,6 +20,7 @@
     height: 48px;
     position: fixed;
     right: 20px;
+    top: 148px;
 }
 .music-icon.animation{
     animation: music 5s linear 0s infinite;
