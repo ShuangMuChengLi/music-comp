@@ -1,7 +1,7 @@
 {
     "description": "A music component of html5 ",
     "name": "music-comp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "index.js",
     "license": "MIT",
     "repository": {
