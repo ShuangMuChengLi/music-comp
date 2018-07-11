@@ -86,7 +86,16 @@ function musicComp(musicList) {
         }
         musicRuning = !musicRuning;
     });
-    music.onended = play;
+    music.onpause =  function() {
+        if(musicRuning){
+            if(++index >=  musicList.length){
+                index = 0;
+            }
+            setSrc();
+            music.load();
+            music.play();
+        }
+    };
     musicComp.play = function () {
         musicIcon.setAttribute("class",  "music-icon animation animation-runing");
         music.play();
