@@ -91,7 +91,7 @@ function musicComp(musicList) {
             if(++index >=  musicList.length){
                 index = 0;
             }
-            setSrc();
+            setSrc(index);
             music.load();
             music.play();
         }
